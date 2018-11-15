@@ -1,0 +1,18 @@
+<div id="chat-view">
+
+  <button (click)="refreshChats()">Refresh</button>
+
+  <form action="">
+    <div class="form-group">
+      <label for="chat-message"></label>
+      <input type="text-area" id="chat-message" name="chat-message" class="chat-message"
+        required [(ngModel)]="chatMessage.message">
+    </div>
+    <button type="submit" (click)="addMessage()">Add message</button>
+  </form>
+  <div class="chat">
+    <app-conversion [messages]="chatMessages">
+
+    </app-conversion>
+  </div>
+</div>
